@@ -71,29 +71,19 @@ randomInt = 0
 while roomLeft == False:
     # put out the first image as a blank
     # Low Density to None
-    if len(ListOfImages) <= 5 or len(ListOfImages) == 9 or len(ListOfImages) == 10 or len(ListOfImages) == 14 or len(ListOfImages) == 15 or len(ListOfImages) == 19 or len(ListOfImages) == 20 or len(ListOfImages) == 21 or len(ListOfImages) == 23 or len(ListOfImages) == 24:
-        randomInt = random.randint(0,1)
-        screen.blit(tileList[randomInt], (tileX,tileY))
-    # Medium Densisty to Low
-    elif (len(ListOfImages) >= 6 and len(ListOfImages) <= 8) or (len(ListOfImages) >= 11 and len(ListOfImages) <= 13) or (len(ListOfImages) >= 16 and len(ListOfImages) <= 18):
-        randomInt = random.randint(1,2)
-        screen.blit(tileList[randomInt], (tileX,tileY))
-    # Medium Densisty to High
-    elif len(ListOfImages) == 12:
-        randomInt = random.randint(2,3)
-        screen.blit(tileList[randomInt], (tileX,tileY))
+    randomInt = random.randint(0,0)
+    screen.blit(tileList[randomInt], (tileX,tileY))
 
-
-    tileX += 45
+    tileX += 50
     ListOfImages.append(randomInt)
     
     print(randomInt)
     count = count + 1
     
-    if tileX > 200:
+    if tileX > 500:
         tileX = 3
-        tileY += 35
-        if tileY > 200:
+        tileY += 50
+        if tileY > 500:
             roomLeft = True    
 
 finished = False
